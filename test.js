@@ -27,6 +27,7 @@ describe("basic functionality", function() {
     .getTitle()
     .then((title)=> {
       console.log("Title was: " + title);
+      assert.ok(title);
     });
   });
 
