@@ -1,0 +1,14 @@
+{
+  "name": "html-import",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "setup-test-env": "http-server & selenium-standalone start &",
+    "test": "mocha test",
+    "teardown-test-env": "pkill -f http-server && pkill -f selenium"
+  },
+  "author": "Tyler Johnson <mail@tyler-johnson.ca> (http://github.com/tejohnso)",
+  "license": "ISC"
+}
