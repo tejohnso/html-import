@@ -7,7 +7,7 @@
   "scripts": {
     "setup-test-env": "http-server & selenium-standalone start &",
     "test": "mocha test",
-    "teardown-test-env": "pkill -f http-server && pkill -f selenium"
+    "teardown-test-env": "(pgrep -f selenium && pgrep -f http-server) |xargs kill 2>/dev/null"
   },
   "author": "Tyler Johnson <mail@tyler-johnson.ca> (http://github.com/tejohnso)",
   "license": "ISC"
