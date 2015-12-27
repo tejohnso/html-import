@@ -31,6 +31,21 @@ describe("basic functionality", function() {
     });
   });
 
+  it("contains imports", ()=>{
+    return client
+    .url("localhost:8080/main.html")
+    .getText("#import1")
+    .then((text)=> {
+      console.log("Text was: " + text);
+      assert.ok(text);
+    })
+    .getText("#import2")
+    .then((text)=> {
+      console.log("Text was: " + text);
+      assert.ok(text);
+    });
+  });
+
   after(()=>{
     return client.end();
   });
